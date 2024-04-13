@@ -3,6 +3,11 @@ package main
 import "fmt"
 import "time"
 
+func firstFunc() {
+	fmt.Println("Kira7 a7ssen artist fi maruecos")
+	fmt.Println("3aaaasseeeemaaaa")
+}
+
 func main() {
 
 	// First Go statements
@@ -52,6 +57,8 @@ func main() {
 	} else {
 		fmt.Println("BAYNA MAFIHACH")
 	}
+
+	firstFunc()
 
 
 }
