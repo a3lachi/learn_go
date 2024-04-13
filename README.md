@@ -66,3 +66,7 @@ const funcFact = "Go is awesome!"
 fmt.Println(funFact)
 ```
 
+### Numeric Types 
+
+![alt text](image.png)
+
