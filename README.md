@@ -161,4 +161,64 @@ var externalMessage = "Everything is normal. Keep calm and carry on."
 ```
 
 
+### Multiple Variable Declaration
+
+```
+var part1, part2 string
+quote, fact := "Bears, Beets, Battlestar Galactica", true
+```
+
+
+
+### The if Statement
+
+```
+alarmRinging := true
+if alarmRinging {
+  fmt.Println("Turn off the alarm!!") 
+}
+
+if (alarmRinging) {
+  fmt.Println("Turn off the alarm!!") 
+} else if otherCondition {
+    fmt.Println("Do something else") 
+}
+
+isHungry := false
+if isHungry {
+  fmt.Println("Eat the cookie") 
+} else {
+  fmt.Println("Step away from the cookie...")
+}
+
+```
+
+### Comparison Operators
+
+```
+"password1" == "password1" // Evaluates to true
+"password1" == "badpass"   // Evaluates to false
+123 != 12 // Evaluates to true
+123 != 123 // Evaluates to false
+100 < 200 // Evaluates to true
+100.5 <= 100.5 // Evaluates to true
+```
+
+### Logical Operators (And, Or)
+
+```
+&&	And
+||	Or
+!	Not
+
+if storeLights == "on" && doorsOpen {
+  fmt.Println("You can enter the store!")
+} 
+
+```
+
+
+
+
+
 
