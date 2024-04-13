@@ -68,5 +68,5 @@ fmt.Println(funFact)
 
 ### Numeric Types 
 
-![alt text](image.png)
+![alt text](numeric.png)
 
