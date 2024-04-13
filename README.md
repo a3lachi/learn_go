@@ -92,3 +92,71 @@ rune        alias for int32
 ```
 
 
+### Default int type
+
+By providing the type int or uint, Go will check to see if the computer architecture is running on is 32-bit or 64-bit. Then it will either provide a 32-bit int (or uint) or a 64-bit one depending on the computer itself.
+
+```
+var timesWeWereFooled int
+var foolishGamesPlayed uint
+```
+
+
+
+### Variable
+Variables are defined with the var keyword and two pieces of information: the name that we will use to refer to them and the type of data stored in the variable. Since variables can be updated we don’t even need to assign a value initially.
+
+```
+var lengthOfSong uint16
+var isMusicOver bool
+var songRating float32
+```
+
+### String
+
+A string is Go’s type for storing and processing text.
+
+```
+var phrase string
+var logo string = "follow your dreams"
+var description string
+description = "This is our logo "+logo 
+```
+
+
+### Zero Values
+
+Even before we assign anything to our variables they hold a value. Go’s designers attempted to make these “sensible defaults” that we can anticipate based on the variable’s types. All numeric variables have a value of 0 before assignment. String variables have a default value of "", which is also known as the empty string because it contains no characters. Boolean variables have a default value of false. 
+
+```
+var classTime uint32
+var averageGrade float32
+var teacherName string
+var isPassFail bool
+
+fmt.Println(classTime) // Prints 0
+fmt.Println(averageGrade) // Prints 0
+fmt.Println(teacherName) // Doesn't print anything
+fmt.Println(isPassFail) // Prints false
+```
+
+### Inferring Type
+
+There is a way to declare a variable without explicitly stating its type using the short declaration := operator. We might use the := operator if we know what value we want our variable to store when creating it.
+
+```
+nuclearMeltdownOccurring := true
+radiumInGroundWater := 4.521
+daysSinceLastWorkplaceCatastrophe := 0
+externalMessage := "Everything is normal. Keep calm and carry on."
+```
+
+We can also perform the same inferring usning : 
+var nuclearMeltdownOccurring = true
+var radiumInGroundWater = 4.521
+var daysSinceLastWorkplaceCatastrophe = 0
+var externalMessage = "Everything is normal. Keep calm and carry on."
+
+
+
+
