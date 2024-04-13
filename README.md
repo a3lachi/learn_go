@@ -52,3 +52,17 @@ go doc fmt
 go doc fmt.Println
 ```
 
+
+## Values and Variables
+
+How to store “data” by creating and using variables in Go.
+
+
+### Const 
+
+We use the const keyword to create a constant. We immediately assign a value to the constant using a literal.
+```
+const funcFact = "Go is awesome!"
+fmt.Println(funFact)
+```
+
