@@ -151,12 +151,14 @@ daysSinceLastWorkplaceCatastrophe := 0
 externalMessage := "Everything is normal. Keep calm and carry on."
 ```
 
-We can also perform the same inferring usning : 
+We can also perform the same inferring using : 
+
+```
 var nuclearMeltdownOccurring = true
 var radiumInGroundWater = 4.521
 var daysSinceLastWorkplaceCatastrophe = 0
 var externalMessage = "Everything is normal. Keep calm and carry on."
-
+```
 
 
 
