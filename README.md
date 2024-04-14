@@ -283,12 +283,117 @@ var pointerForInt *int
 minutes := 525600
 pointerForInt = &minutes
 fmt.Println(pointerForInt) // Prints 0xc000018038
+fmt.Println(*pointerForInt) // Prints 525600
+
+star := "Polaris"
+var starAddress *string = &star
+```
+
+### Dereferencing
+We know that addresses are where values are stored and pointers allow us to keep track of addresses. But what if we want the address to store a different value.
+
+```
+lyrics := "Moments so dear" 
+pointerForStr := &lyrics
+*pointerForStr = "Journeys to plan" 
+fmt.Println(lyrics) // Prints: Journeys to plan
+```
+
+
+### For Loop
+
+```
+for number := 0; number < 5; number++ {
+  fmt.Print(number, " ")
+}
+
+for count := 1; count <= 12; count=count+2 {
+    fmt.Println(count)
+}
 ```
 
 
 
+### For as a While Loop
+Most programming languages use the "while" keyword to declare indefinite loops. Go uses "for"
+
+```
+number := 0 // Initialize a variable to be used inside the loop
+for number < 5 {
+  fmt.Println(number)
+  number++ // Update the variable being used
+}
+```
 
 
+
+### Infinite Loops
+
+An infinite loop is a loop where the condition can never be reached, causing the loop to run forever.
+```
+for {
+  // Loop body logic
+  // This repeats forever
+}
+// This is never reached
+```
+
+
+### Loop Keywords: Break and Continue
+
+The "break" keyword allows the programmer to stop the loop at the current iteration. The "continue" keyword works similarly, allowing the loop to skip to the next iteration.
+
+
+```
+animals := []string{"Cat", "Dog", "Fish", "Turtle"}
+for index := 0; index < len(animals); index++ {
+  if animals[index] == "Dog" {
+    fmt.Println("Found the perfect animal!")
+    break // Stop searching the array
+  }
+}
+
+jellybeans := []string{"green", "blue", "yellow", "red", "green", "yellow", "red"}
+for index := 0; index < len(jellybeans); index++ {
+  if jellybeans[index] == "green" {
+    continue
+  }
+  fmt.Println("You ate the", jellybeans[index], "jellybean!")
+}
+```
+
+
+### Arrays
+
+```
+var arr1 [n]type
+arr2 := [n]type{el1, el2, ..., eln}
+var intArray []int  
+floatArray := [4]float32{1.1,2.2,3.3,4.4}
+zeroes := [3]float64{}
+```
+
+
+### Maps 
+
+```
+variable_name := map[key_data_type]value_data_type{}
+map_name := map[key_data_type]value_data_type{
+  key-1: value-1,
+  key-2: value-2,
+  key-N: value-N,
+}
+variable_name := map_name[key_value] 
+```
+
+
+Each map and array has a set amount of items that they contain. In Go, the range keyword can be used to work through these items one at a time within a loop. For example:
+```
+letters := []string{"A", "B", "C", "D"}
+for index, value := range letters {
+  fmt.Println("Index:", index, "Value:", value)
+}
+```
 
 
 

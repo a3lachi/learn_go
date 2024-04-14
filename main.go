@@ -85,4 +85,35 @@ func main() {
 	x := "My very first address"
 	fmt.Println(&x) 
 
+	// Pointers
+	var strPointer *string 
+	strPointer = &x
+	fmt.Println(strPointer) 
+	fmt.Println(*strPointer) 
+
+	// For loops
+	for counter:=0;counter<10;counter++ {
+		fmt.Print(counter," ")
+	}
+	fmt.Println("")
+
+	for count := 1; count <= 12; count=count+2 {
+		fmt.Print(count," ")
+	}
+	fmt.Println("")
+
+	// While Loops
+	whileCounter:=1
+	for whileCounter<20 {
+		fmt.Print(whileCounter,"-")
+		whileCounter++
+	}
+	fmt.Println("")
+
+
+	// Arrays
+	var intArray []int // [5]int
+	floatArray := [5]float32{1.1,2.2,3.3,4.4}
+	zeroes := [3]float64{}
+	fmt.Println(intArray,floatArray,zeroes)
 }
