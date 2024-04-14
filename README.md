@@ -217,6 +217,78 @@ if storeLights == "on" && doorsOpen {
 
 ```
 
+### Functions
+
+A simple function declaration goes by : 
+```
+func multiplier(x int32, y int32) int32 {
+  return x * y
+}
+```
+
+
+### Multiple Return Values
+
+```
+func GPA(midtermGrade float32, finalGrade float32) (string, float32) {
+  averageGrade := (midtermGrade + finalGrade) / 2
+  var gradeLetter string
+  if averageGrade > 90 {
+    gradeLetter = "A"
+  } else if averageGrade > 80 {
+    gradeLetter = "B"
+  } else if averageGrade > 70 {
+    gradeLetter = "C"
+  } else if averageGrade > 60 {
+    gradeLetter = "D"
+  } else {
+    gradeLetter = "F"
+  }
+
+  return gradeLetter, averageGrade 
+}
+
+myGrade, myAverage = GPA(89.4, 76.8)
+```
+
+
+### Deferring Resolution
+
+We can delay a function call to the end of the current scope by using the defer keyword. defer tells Go to run a function, but at the end of the current function. This is useful for logging, file writing, and other utilities.
+
+```
+func deferTesting() {
+	defer fmt.Println("Fikom a khouya chi f3ayl d nissa2")
+	defer fmt.Println("Ntiya ra qtita Siamois")
+	fmt.Println("Kiraaaaaa")
+	fmt.Println("Chno bghitit nclipi rap")
+}
+```
+
+
+### Addresses
+
+To find a variable’s address we use the & operator followed by the variable name, like so :
+```
+x := "My very first address"
+fmt.Println(&x) // Prints 0x414020
+```
+
+
+### Pointers
+
+Pointers are variables that specifically store addresses.
+```
+var pointerForInt *int
+minutes := 525600
+pointerForInt = &minutes
+fmt.Println(pointerForInt) // Prints 0xc000018038
+```
+
+
+
+
+
 
 
 

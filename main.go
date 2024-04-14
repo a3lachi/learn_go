@@ -8,6 +8,21 @@ func firstFunc() {
 	fmt.Println("3aaaasseeeemaaaa")
 }
 
+func multiply(x int, y int) int {
+	return x*y
+}
+
+func returnTwo(x int) (int, int) {
+	return x*2,x/2 
+}
+
+func deferTesting() {
+	defer fmt.Println("Fikom a khouya chi f3ayl d nissa2")
+	defer fmt.Println("Ntiya ra qtita Siamois")
+	fmt.Println("Kiraaaaaa")
+	fmt.Println("Chno bghitit nclipi rap")
+}
+
 func main() {
 
 	// First Go statements
@@ -60,5 +75,14 @@ func main() {
 
 	firstFunc()
 
+	fmt.Println("The multiplication goes :",multiply(56,7))
+
+	fmt.Println(returnTwo(6))
+
+	deferTesting()
+
+	// Adresses 
+	x := "My very first address"
+	fmt.Println(&x) 
 
 }
