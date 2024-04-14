@@ -3,6 +3,7 @@ package main
 import "fmt"
 import "time"
 
+
 func firstFunc() {
 	fmt.Println("Kira7 a7ssen artist fi maruecos")
 	fmt.Println("3aaaasseeeemaaaa")
@@ -111,9 +112,50 @@ func main() {
 	fmt.Println("")
 
 
-	// Arrays
+	// Arrays & Slices
 	var intArray []int // [5]int
+	intArray = []int{5,6,7,8,9,10}
+	// intArray = intArray[1:3]
+	intArray = intArray[:len(intArray)-1]
+
 	floatArray := [5]float32{1.1,2.2,3.3,4.4}
 	zeroes := [3]float64{}
 	fmt.Println(intArray,floatArray,zeroes)
+
+	for index, value := range floatArray {
+		fmt.Println(index,value)
+	}
+
+
+	// Maps
+	newMap := map[string]int{
+		"simo":667,
+		"mohamed":133,
+		"kira7":555,
+	}
+	fmt.Println("New Map :",newMap)
+	fmt.Println("First Map Eelement :",newMap["simo"])
+
+	newMap["toto"]=567
+	newMap["khoo"]=212
+
+	delete(newMap,"simo")
+
+	for key, value := range newMap {
+		fmt.Printf("The key %v and the value %v\n",key, value)
+	}
+	
+	names := []string{"Kathryn", "Martin", "Sasha", "Steven"}
+	fmt.Println("Names length :",len(names))
+
+	books := []string{"Tom Sawyer", "Of Mice and Men"}
+	books = append(books, "Frankenstein")
+	books = append(books, "Dracula")
+	fmt.Println(books)
+
+
+	// Maps
+	mymap := map[string]int{}
+	fmt.Println(mymap)
+
 }

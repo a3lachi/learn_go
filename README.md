@@ -364,6 +364,12 @@ for index := 0; index < len(jellybeans); index++ {
 
 
 ### Arrays
+When we declare a variable in Go, the compiler:
+    - Finds space in memory for that variable
+    - Associates the variable with a name
+
+Declaring an array in Go requires that we provide the number of elements. Once declared, we cannot change this number without declaring a new array.
+
 
 ```
 var arr1 [n]type
@@ -371,10 +377,50 @@ arr2 := [n]type{el1, el2, ..., eln}
 var intArray []int  
 floatArray := [4]float32{1.1,2.2,3.3,4.4}
 zeroes := [3]float64{}
+triangleSides := [3]int{15, 26, 30}
+triangleAngles := [...]int{30, 60, 90} // the compiler auto determine the size of the array
 ```
 
 
+### Slices
+Slices are a data collection type similar to arrays, but they have the ability to change their size.
+```
+var intArray []int
+stringSlice := []string{}
+names := []string{"Kathryn", "Martin", "Sasha", "Steven"}
+```
+
+A slice is resizeable, so there is a difference between:
+- Its length, the current number of elements it holds
+- Its capacity, the number of elements it can hold before needing to resize itself.
+
+```
+slice := []string{"Fido", "Fifi", "FruFru"}
+fmt.Println(slice, len(slice), cap(slice))
+```
+
+
+How to add an element to a slice :
+```
+books := []string{"Tom Sawyer", "Of Mice and Men"}
+books = append(books, "Frankenstein")
+books = append(books, "Dracula")
+```
+
+
+
+
 ### Maps 
+
+Go's implementation of hash tables.
+
+To declare an empty map :
+```
+prices := make(map[string]float32)
+highs := map[int]int{}
+```
+
+
 
 ```
 variable_name := map[key_data_type]value_data_type{}
@@ -393,6 +439,31 @@ letters := []string{"A", "B", "C", "D"}
 for index, value := range letters {
   fmt.Println("Index:", index, "Value:", value)
 }
+```
+
+
+To check if a key is in a map we use a bool :
+```
+customer,status := customers["billy"]
+
+if status {
+  fmt.Println("we found the customer")
+} else {
+  fmt.Println("no such customer!")
+}
+```
+
+
+To add an element to a map :
+```
+customers["simo"] = 345
+```
+
+
+To delete an key-value pair from a map :
+```
+delete(yourMap, keyValueToDelete)
+delete(contacts, "Gary")
 ```
 
 
