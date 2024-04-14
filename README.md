@@ -469,4 +469,98 @@ delete(contacts, "Gary")
 
 
 
+## Struct
+A struct is a user-defined type that combines several fields of different data types, normally related, forming a collection.
+```
+// Struct names begin with a capital letter in Go
+type NameOfStruct struct {
+  // Struct fields go here
+}
+
+type Point struct {
+  x int
+  y int
+}
+```
+
+
+
+Creating an instance : 
+```
+p1 := Point{x: 10, y: 12}
+p1 := Point{x: 10}   // y will be set to 0
+p1 := Point{}   // x and y will be set to 0
+p1 := Point{10, 12}
+```
+
+
+
+
+Functions associated with a struct are written outside of the struct :
+```
+func (rectangle Rectangle) area() float32 {
+  return rectangle.length * rectangle.width
+}
+```
+
+### Pointers to a Struct
+Without pointers, when a variable is passed into a function, only a copy of it is used inside the function. We can use pointers to modify values in our structs within a function.
+
+```
+steve := Employee{“Steve”, “Stevens”, 34, “Junior Manager”}
+pointerToSteve := &steve
+
+(*pointerToSteve).firstName = "Simo"
+pointerToSteve.firstName = "A3la"
+```
+
+
+
+We can use these pointers to modify structs in our functions :
+```
+func (rectangle *Rectangle) modify(newLength float32){
+  rectangle.length = newLength
+}
+```
+
+
+
+### Arrays of Structs
+What can we do when dealing with many structs of the same type? We can use them in an array together!
+
+```
+points := []Point{ {1, 1}, {7, 27}, {12, 7}, {9, 25} }
+
+a = {1, 1}
+b = {7, 27}
+c = {12, 7}
+d = {9, 25}
+points := []Point{a, b, c, d}
+```
+
+
+### Nested Structs
+
+```
+type Name struct{
+  firstName string
+  lastName string
+}
+
+type Employee struct{
+  name Name
+  age int
+  title string
+}
+
+carl := Employee{Name{“Carl”, “Carlson”}, 32, “Engineer”}
+```
+
+
+
+
+
+
+
+
 

@@ -24,6 +24,19 @@ func deferTesting() {
 	fmt.Println("Chno bghitit nclipi rap")
 }
 
+type Cordinate struct {
+	x int 
+	y int
+}
+
+func friCords(cords Cordinate) int {
+	return cords.x * cords.y
+}
+
+func (cords Cordinate) area() int {
+	return cords.x * cords.y
+}
+
 func main() {
 
 	// First Go statements
@@ -157,5 +170,10 @@ func main() {
 	// Maps
 	mymap := map[string]int{}
 	fmt.Println(mymap)
+
+
+	// Structs 
+	cords := Cordinate{69,23}
+	fmt.Println(cords.area(),cords,friCords(cords))
 
 }
