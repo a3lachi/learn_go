@@ -6,7 +6,7 @@ import "time"
 
 func firstFunc() {
 	fmt.Println("Kira7 a7ssen artist fi maruecos")
-	fmt.Println("3aaaasseeeemaaaa")
+	fmt.Println("3aaaasseeeemaaa")
 }
 
 func multiply(x int, y int) int {
